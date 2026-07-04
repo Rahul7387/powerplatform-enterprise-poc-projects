@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FieldOps360 — Canvas App Mockup</title>
+<style>
+  :root{
+    --powerapps-purple:#742774;
+    --powerapps-grad-start:#7719AA;
+    --powerapps-grad-end:#4A1D96;
+    --surface:#F3F2F1;
+    --card:#FFFFFF;
+    --border:#E1DFDD;
+    --text:#201F1E;
+    --text-secondary:#605E5C;
+    --success:#107C10;
+    --warning:#D83B01;
+    --info:#0078D4;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;
+    background:var(--surface);
+    padding:32px 16px;
+    color:var(--text);
+  }
+  .page-header{max-width:1100px;margin:0 auto 28px;}
+  .page-header h1{font-size:22px;margin:0 0 4px;}
+  .page-header p{color:var(--text-secondary);margin:0;font-size:13px;}
+  .badge{display:inline-block;background:var(--powerapps-purple);color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;margin-bottom:10px;letter-spacing:.3px;}
+
+  .stage{
+    max-width:1100px;margin:0 auto;
+    display:flex; gap:28px; flex-wrap:wrap; align-items:flex-start;
+  }
+
+  .phone{
+    width:300px;
+    background:#0b0b0b;
+    border-radius:34px;
+    padding:12px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+    flex-shrink:0;
+  }
+  .phone .screen{
+    background:var(--surface);
+    border-radius:24px;
+    overflow:hidden;
+    height:610px;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+  }
+  .status-bar{
+    height:26px;background:#000;color:#fff;font-size:10px;
+    display:flex;align-items:center;justify-content:space-between;padding:0 16px;
+  }
+  .app-top{
+    background:linear-gradient(135deg,var(--powerapps-grad-start),var(--powerapps-grad-end));
+    color:#fff;padding:14px 16px 12px;
+  }
+  .app-top .title{font-size:16px;font-weight:600;}
+  .app-top .subtitle{font-size:11px;opacity:.85;margin-top:2px;}
+  .offline-banner{
+    background:#FFF4CE;color:#5c4a00;font-size:11px;font-weight:600;
+    padding:6px 12px;display:flex;align-items:center;gap:6px;border-bottom:1px solid #ecd98a;
+  }
+  .offline-banner .dot{width:7px;height:7px;border-radius:50%;background:#D83B01;display:inline-block;}
+  .app-body{flex:1;overflow-y:auto;padding:10px 12px;}
+  .site-card{
+    background:var(--card);border:1px solid var(--border);border-radius:8px;
+    padding:10px 12px;margin-bottom:8px;box-shadow:0 1px 2px rgba(0,0,0,.04);
+  }
+  .site-card .row1{display:flex;justify-content:space-between;align-items:center;}
+  .site-card .name{font-size:13px;font-weight:600;}
+  .site-card .meta{font-size:11px;color:var(--text-secondary);margin-top:2px;}
+  .pill{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;}
+  .pill.due{background:#FDE7E9;color:#A80000;}
+  .pill.ok{background:#DFF6DD;color:var(--success);}
+  .pill.progress{background:#DEECF9;color:var(--info);}
+
+  .form-label{font-size:11px;font-weight:600;color:var(--text-secondary);margin:10px 0 4px;text-transform:uppercase;letter-spacing:.4px;}
+  .form-field{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:9px 10px;font-size:12.5px;}
+  .photo-box{
+    height:110px;border:2px dashed #b5b1ae;border-radius:8px;
+    display:flex;align-items:center;justify-content:center;flex-direction:column;
+    color:var(--text-secondary);font-size:11px;background:#fafafa;margin-top:6px;gap:6px;
+  }
+  .camera-icon{font-size:22px;}
+  .ai-tag{
+    margin-top:8px;background:#F3E9FB;border:1px solid #D9BEEE;color:#5c2d82;
+    font-size:11px;font-weight:600;border-radius:6px;padding:6px 8px;display:flex;align-items:center;gap:6px;
+  }
+  .ai-tag .dot{width:6px;height:6px;background:#8f4fbe;border-radius:50%;}
+
+  .tabbar{
+    height:52px;background:#fff;border-top:1px solid var(--border);
+    display:flex;align-items:center;justify-content:space-around;font-size:9.5px;color:var(--text-secondary);
+  }
+  .tabbar .tab.active{color:var(--powerapps-purple);font-weight:700;}
+  .tab-icon{font-size:16px;display:block;margin-bottom:2px;}
+
+  .primary-btn{
+    background:var(--powerapps-purple);color:#fff;border:none;border-radius:6px;
+    padding:10px;font-size:12.5px;font-weight:600;width:100%;margin-top:12px;
+  }
+  .secondary-btn{
+    background:#fff;color:var(--powerapps-purple);border:1px solid var(--powerapps-purple);border-radius:6px;
+    padding:9px;font-size:12px;font-weight:600;width:100%;margin-top:8px;
+  }
+
+  .panel-caption{max-width:260px;font-size:12px;color:var(--text-secondary);line-height:1.5;padding-top:8px;}
+  .panel-caption strong{color:var(--text);}
+  .screen-label{font-size:11px;font-weight:700;color:var(--powerapps-purple);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;}
+</style>
+</head>
+<body>
+
+  <div class="page-header">
+    <span class="badge">CANVAS APP MOCKUP</span>
+    <h1>FieldOps360 — Offline-First Field Service Companion</h1>
+    <p>Static visual reference only — approximates the real Power Apps Canvas runtime look &amp; feel (Fluent UI, mobile player chrome). Not a functional app.</p>
+  </div>
+
+  <div class="stage">
+
+    <!-- SCREEN 1: SITE LIST (offline) -->
+    <div>
+      <div class="screen-label">Screen 1 · Site List (Offline)</div>
+      <div class="phone">
+        <div class="screen">
+          <div class="status-bar"><span>9:41</span><span>●●● 4G</span></div>
+          <div class="app-top">
+            <div class="title">FieldOps360</div>
+            <div class="subtitle">Hi Priya · 6 sites assigned today</div>
+          </div>
+          <div class="offline-banner"><span class="dot"></span> Offline — 3 changes queued, will sync automatically</div>
+          <div class="app-body">
+            <div class="site-card">
+              <div class="row1"><span class="name">Warehouse 4B — Pune</span><span class="pill due">Due 2:00p</span></div>
+              <div class="meta">Asset: HVAC-Unit-12 · Last inspected 34 days ago</div>
+            </div>
+            <div class="site-card">
+              <div class="row1"><span class="name">Distribution Center C</span><span class="pill progress">In progress</span></div>
+              <div class="meta">Asset: Conveyor-07 · 2 of 5 checks complete</div>
+            </div>
+            <div class="site-card">
+              <div class="row1"><span class="name">Retail Site — Baner Rd</span><span class="pill ok">Completed</span></div>
+              <div class="meta">Asset: Genset-02 · Synced 09:14 AM</div>
+            </div>
+            <div class="site-card">
+              <div class="row1"><span class="name">Cold Storage Unit 9</span><span class="pill due">Due 4:30p</span></div>
+              <div class="meta">Asset: Chiller-19 · Flagged: prior critical finding</div>
+            </div>
+          </div>
+          <div class="tabbar">
+            <div class="tab active"><span class="tab-icon">⌂</span>Sites</div>
+            <div class="tab"><span class="tab-icon">🗒</span>Tasks</div>
+            <div class="tab"><span class="tab-icon">💬</span>Assistant</div>
+            <div class="tab"><span class="tab-icon">☰</span>Sync</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCREEN 2: INSPECTION FORM w/ AI photo tag -->
+    <div>
+      <div class="screen-label">Screen 2 · Inspection + AI Builder photo tagging</div>
+      <div class="phone">
+        <div class="screen">
+          <div class="status-bar"><span>9:42</span><span>●●● 4G</span></div>
+          <div class="app-top">
+            <div class="title">‹ Cold Storage Unit 9</div>
+            <div class="subtitle">Asset: Chiller-19</div>
+          </div>
+          <div class="app-body">
+            <div class="form-label">Condition</div>
+            <div class="form-field">⚠ Critical</div>
+
+            <div class="form-label">Notes</div>
+            <div class="form-field" style="height:44px;">Visible corrosion on the coolant line joint, near valve...</div>
+
+            <div class="form-label">Photo evidence</div>
+            <div class="photo-box">
+              <span class="camera-icon">📷</span>
+              Rust patch — coolant joint.jpg
+            </div>
+            <div class="ai-tag"><span class="dot"></span> AI Builder: Defect detected — Corrosion (92% confidence)</div>
+
+            <button class="primary-btn">Submit inspection</button>
+            <button class="secondary-btn">Save &amp; continue offline</button>
+          </div>
+          <div class="tabbar">
+            <div class="tab"><span class="tab-icon">⌂</span>Sites</div>
+            <div class="tab active"><span class="tab-icon">🗒</span>Tasks</div>
+            <div class="tab"><span class="tab-icon">💬</span>Assistant</div>
+            <div class="tab"><span class="tab-icon">☰</span>Sync</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-caption">
+      <strong>What this shows:</strong> the offline banner and queued-changes indicator represent the 2026 Wave&nbsp;1 real-time offline-first Dataverse profile — data keeps working with no connection, then reconciles automatically. The AI Builder tag on the photo screen represents inline defect classification captured at the point of inspection, before the technician even leaves site.
+    </div>
+
+  </div>
+
+</body>
+</html>
