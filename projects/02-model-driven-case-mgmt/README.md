@@ -7,6 +7,10 @@
 
 ---
 
+**🔗 Live HTML mockup (look & feel preview):** [Model-Driven App mockup](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/02-model-driven-case-mgmt/index.html)
+
+---
+
 ## 1. Business Scenario
 
 A shared-services function (IT Helpdesk + HR case management combined) needs a single, secure system of record to:
@@ -104,7 +108,7 @@ flowchart TB
 16. Package as managed **Solution**, set environment variables for SLA thresholds so they're configurable per environment without code changes.
 17. Set up solution checker + automated pipeline (GitHub Actions/Azure DevOps) with a "solution health check" gate before Prod deployment.
 
-## 5. Demo Script
+## 5. Demo script
 1. Log in as IT Agent — show HR cases are completely invisible (security proof, not just UI hiding).
 2. Create a new case, show AI auto-categorization firing instantly.
 3. Walk the BPF stages, show SLA timer visually.
