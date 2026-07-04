@@ -7,6 +7,10 @@
 
 ---
 
+**🔗 Live HTML mockup (look & feel preview):** [Power Pages mockup](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/03-power-pages-vendor-portal/index.html)
+
+---
+
 ## 1. Business Scenario
 
 A mid-size enterprise has 300+ external vendors who currently email spreadsheets for onboarding, invoice submission, and compliance document uploads. Procurement wants a secure external-facing portal where vendors can:
@@ -101,7 +105,7 @@ flowchart TB
 15. Package the site as part of a **Solution**, use the Power Pages CLI / VS Code extension for source-control-based development (Git-based site content), not exclusively the browser Design Studio.
 16. Deploy through Dev → UAT → Prod site environments with environment variables per stage (site URLs, connection references).
 
-## 5. Demo Script
+## 5. Demo script
 1. Show anonymous registration flow → approval in Teams → welcome email.
 2. Log in as Vendor A, submit an invoice, show validation flow catch a PO mismatch.
 3. Try (in a test/staging way) to demonstrate Vendor A cannot see Vendor B's invoices — prove table permissions.
