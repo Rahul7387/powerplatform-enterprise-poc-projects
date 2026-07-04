@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>InvoiceFlow AP — Power Automate Mockup</title>
+<style>
+  :root{
+    --pa-blue:#0066FF;
+    --surface:#F3F2F1;
+    --card:#fff;
+    --border:#E1DFDD;
+    --text:#201F1E;
+    --text-secondary:#605E5C;
+    --success:#107C10;
+    --warn:#D83B01;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;background:var(--surface);color:var(--text);}
+  .badge-wrap{padding:20px 24px 0;}
+  .badge{display:inline-block;background:var(--pa-blue);color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;letter-spacing:.3px;}
+  .desc{font-size:12.5px;color:var(--text-secondary);padding:6px 24px 16px;max-width:900px;}
+
+  .app-shell{margin:0 24px 24px;border:1px solid var(--border);border-radius:6px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);background:#fff;}
+
+  .topbar{background:#fff;border-bottom:1px solid var(--border);padding:10px 16px;display:flex;align-items:center;gap:12px;}
+  .topbar .title{font-weight:700;font-size:14px;}
+  .topbar .status{margin-left:auto;font-size:11.5px;background:#DFF6DD;color:var(--success);padding:3px 10px;border-radius:10px;font-weight:600;}
+  .toolbar{background:#faf9f8;border-bottom:1px solid var(--border);padding:8px 16px;display:flex;gap:10px;font-size:12px;}
+  .tbtn{padding:5px 10px;border:1px solid var(--border);border-radius:4px;background:#fff;font-weight:600;}
+  .tbtn.primary{background:var(--pa-blue);color:#fff;border-color:var(--pa-blue);}
+
+  .canvas{padding:30px 20px;background:
+    linear-gradient(#eceaea 1px, transparent 1px) 0 0/24px 24px,
+    linear-gradient(90deg, #eceaea 1px, transparent 1px) 0 0/24px 24px, #fbfbfb;
+    display:flex;flex-direction:column;align-items:center;gap:0;
+  }
+
+  .node{
+    background:#fff;border:1px solid var(--border);border-radius:8px;width:340px;
+    box-shadow:0 2px 6px rgba(0,0,0,.06);position:relative;
+  }
+  .node-head{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #f1f0ef;}
+  .node-icon{width:30px;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;flex-shrink:0;}
+  .node-title{font-size:12.5px;font-weight:700;}
+  .node-sub{font-size:10.5px;color:var(--text-secondary);}
+  .node-body{padding:10px 14px;font-size:11.5px;color:var(--text-secondary);}
+
+  .connector{width:2px;height:26px;background:#c8c6c4;}
+  .connector.branch-wrap{width:100%;display:flex;justify-content:center;position:relative;height:26px;}
+
+  .branch-row{display:flex;gap:40px;align-items:flex-start;}
+  .branch-col{display:flex;flex-direction:column;align-items:center;}
+  .branch-label{font-size:10px;font-weight:700;color:#fff;background:#8a8886;padding:2px 10px;border-radius:10px;margin-bottom:8px;}
+  .branch-label.yes{background:var(--success);}
+  .branch-label.no{background:var(--warn);}
+
+  .ic-trigger{background:#8a8886;}
+  .ic-ai{background:#8764B8;}
+  .ic-condition{background:#F2C811;color:#5c4a00;}
+  .ic-approval{background:var(--pa-blue);}
+  .ic-post{background:var(--success);}
+  .ic-catch{background:var(--warn);}
+
+  .badge-conf{display:inline-block;background:#F3E9FB;color:#5c2d82;font-size:10px;font-weight:700;padding:2px 8px;border-radius:8px;margin-top:6px;}
+
+  .run-history{padding:16px 20px 22px;border-top:1px solid var(--border);background:#fff;}
+  .run-history .h{font-size:12.5px;font-weight:700;margin-bottom:8px;}
+  table{width:100%;border-collapse:collapse;font-size:11.5px;}
+  th{text-align:left;padding:6px 8px;color:var(--text-secondary);font-size:10.5px;text-transform:uppercase;border-bottom:1px solid var(--border);}
+  td{padding:7px 8px;border-bottom:1px solid #f4f3f2;}
+  .runstatus{font-size:10px;font-weight:700;padding:2px 8px;border-radius:8px;}
+  .runstatus.ok{background:#DFF6DD;color:var(--success);}
+  .runstatus.fail{background:#FDE7E9;color:#A80000;}
+
+  .panel-caption{padding:6px 24px 26px;font-size:12px;color:var(--text-secondary);max-width:900px;line-height:1.6;}
+  .panel-caption strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+  <div class="badge-wrap"><span class="badge">POWER AUTOMATE FLOW MOCKUP</span></div>
+  <div class="desc">InvoiceFlow AP — approximates the cloud flow designer canvas: trigger, AI Builder extraction, conditional branching, approval, exception handling. Static reference only.</div>
+
+  <div class="app-shell">
+    <div class="topbar">
+      <span class="title">InvoiceFlow AP — Automated Invoice Processing</span>
+      <span class="status">● Turned on</span>
+    </div>
+    <div class="toolbar">
+      <div class="tbtn primary">Save</div>
+      <div class="tbtn">Test</div>
+      <div class="tbtn">28-day analytics</div>
+      <div class="tbtn">Run history</div>
+    </div>
+
+    <div class="canvas">
+
+      <div class="node">
+        <div class="node-head">
+          <div class="node-icon ic-trigger">⚡</div>
+          <div><div class="node-title">When a file is created</div><div class="node-sub">SharePoint — Incoming Invoices</div></div>
+        </div>
+      </div>
+      <div class="connector"></div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="node-icon ic-ai">✨</div>
+          <div><div class="node-title">Extract invoice fields</div><div class="node-sub">AI Builder — Invoice Processing model</div></div>
+        </div>
+        <div class="node-body">Vendor, Invoice #, Amount, PO Ref, Due Date <span class="badge-conf">94% confidence</span></div>
+      </div>
+      <div class="connector"></div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="node-icon ic-condition">◆</div>
+          <div><div class="node-title">Condition</div><div class="node-sub">Amount ≤ ₹2,500 AND PO matched</div></div>
+        </div>
+      </div>
+      <div class="connector"></div>
+
+      <div class="branch-row">
+        <div class="branch-col">
+          <div class="branch-label yes">YES</div>
+          <div class="node" style="width:250px;">
+            <div class="node-head">
+              <div class="node-icon ic-post">✔</div>
+              <div><div class="node-title">Auto-approve</div><div class="node-sub">No human step needed</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="branch-col">
+          <div class="branch-label no">NO</div>
+          <div class="node" style="width:250px;">
+            <div class="node-head">
+              <div class="node-icon ic-approval">👤</div>
+              <div><div class="node-title">Start approval</div><div class="node-sub">Adaptive Card in Teams</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="connector"></div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="node-icon ic-post">📤</div>
+          <div><div class="node-title">Post to ledger (child flow)</div><div class="node-sub">PostToERP_v1 · updates Dataverse Invoice status</div></div>
+        </div>
+      </div>
+      <div class="connector"></div>
+
+      <div class="node" style="border-color:#f3c6b8;">
+        <div class="node-head">
+          <div class="node-icon ic-catch">⛔</div>
+          <div><div class="node-title">Scope: Catch (configure run after = has failed)</div><div class="node-sub">Log exception + Teams alert to AP Lead</div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="run-history">
+      <div class="h">Recent runs</div>
+      <table>
+        <tr><th>Run</th><th>Trigger file</th><th>Duration</th><th>Status</th></tr>
+        <tr><td>#4821</td><td>Invoice_NorthlineSupplies_2312.pdf</td><td>8.2s</td><td><span class="runstatus ok">Succeeded</span></td></tr>
+        <tr><td>#4820</td><td>Invoice_Ashford_0091.pdf</td><td>11.6s</td><td><span class="runstatus ok">Succeeded</span></td></tr>
+        <tr><td>#4819</td><td>Invoice_Meridian_5502.pdf</td><td>4.1s</td><td><span class="runstatus fail">Failed — SharePoint throttled, retried</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel-caption">
+    <strong>What this shows:</strong> the try/catch scope pattern and child-flow reuse (PostToERP_v1) represent production-grade reliability engineering, not a one-shot happy-path demo. The run history panel is what turns "I built a flow" into a measurable, monitored automation asset.
+  </div>
+
+</body>
+</html>
