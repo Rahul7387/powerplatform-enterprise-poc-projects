@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DocIntelligence — AI Builder Mockup</title>
+<style>
+  :root{
+    --ai-purple:#8764B8;
+    --ai-purple-dark:#5C3E8F;
+    --surface:#F3F2F1;
+    --card:#fff;
+    --border:#E1DFDD;
+    --text:#201F1E;
+    --text-secondary:#605E5C;
+    --success:#107C10;
+    --warn:#D83B01;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;background:var(--surface);color:var(--text);}
+  .badge-wrap{padding:20px 24px 0;}
+  .badge{display:inline-block;background:var(--ai-purple);color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;letter-spacing:.3px;}
+  .desc{font-size:12.5px;color:var(--text-secondary);padding:6px 24px 16px;max-width:900px;}
+
+  .app-shell{margin:0 24px 24px;border:1px solid var(--border);border-radius:6px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);background:#fff;}
+  .topbar{background:linear-gradient(90deg,var(--ai-purple),var(--ai-purple-dark));color:#fff;padding:12px 18px;font-size:14px;font-weight:700;display:flex;align-items:center;gap:10px;}
+  .topbar .sub{font-weight:400;font-size:11.5px;opacity:.85;}
+
+  .split{display:flex;}
+  .doc-preview{
+    width:42%;background:#fafafa;border-right:1px solid var(--border);padding:20px;
+  }
+  .doc-page{
+    background:#fff;border:1px solid var(--border);border-radius:4px;padding:22px 20px;font-size:10.5px;line-height:1.7;color:#3a3a3a;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);position:relative;
+  }
+  .doc-page .hl{background:#EAE0F7;border-bottom:2px solid var(--ai-purple);padding:1px 2px;border-radius:2px;}
+  .doc-page .hl2{background:#FFF1D6;border-bottom:2px solid #C99A1E;padding:1px 2px;border-radius:2px;}
+  .doc-title{font-weight:700;font-size:13px;margin-bottom:10px;text-align:center;}
+
+  .fields{width:58%;padding:20px 22px;}
+  .fields h3{font-size:13px;margin:0 0 4px;}
+  .fields .h-sub{font-size:11.5px;color:var(--text-secondary);margin-bottom:16px;}
+
+  .field-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid #f1f0ef;font-size:12.5px;}
+  .field-row .label{color:var(--text-secondary);}
+  .field-row .val{font-weight:600;}
+  .conf{font-size:10px;font-weight:700;padding:2px 8px;border-radius:8px;margin-left:8px;}
+  .conf.high{background:#DFF6DD;color:var(--success);}
+  .conf.med{background:#FFF1D6;color:#8a6100;}
+
+  .summary-box{
+    margin-top:18px;background:#F7F2FC;border:1px solid #E1D4F3;border-radius:8px;padding:14px 16px;font-size:12px;color:#3d2a54;line-height:1.6;
+  }
+  .summary-box .tag{font-size:10.5px;font-weight:700;color:var(--ai-purple);text-transform:uppercase;letter-spacing:.4px;display:block;margin-bottom:6px;}
+  .flag{display:inline-block;background:#FDE7E9;color:#A80000;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:8px;margin-top:8px;margin-right:6px;}
+
+  .risk-box{
+    margin-top:16px;display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:8px;padding:12px 14px;
+  }
+  .risk-gauge{width:52px;height:52px;border-radius:50%;background:conic-gradient(var(--warn) 0% 68%, #eee 68% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .risk-gauge .inner{width:38px;height:38px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--warn);}
+  .risk-text .t1{font-size:12.5px;font-weight:700;}
+  .risk-text .t2{font-size:11px;color:var(--text-secondary);}
+
+  .panel-caption{padding:6px 24px 26px;font-size:12px;color:var(--text-secondary);max-width:900px;line-height:1.6;}
+  .panel-caption strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+  <div class="badge-wrap"><span class="badge">AI BUILDER MOCKUP</span></div>
+  <div class="desc">DocIntelligence — contract extraction, generative summarization, and renewal-risk prediction. Static reference showing document processing output, not a functional model.</div>
+
+  <div class="app-shell">
+    <div class="topbar">DocIntelligence <span class="sub">— Contract Analysis Workspace</span></div>
+    <div class="split">
+      <div class="doc-preview">
+        <div class="doc-title">MASTER SERVICE AGREEMENT</div>
+        <div class="doc-page">
+          This Agreement is entered into between <span class="hl">Northline Supplies Pvt. Ltd.</span> ("Vendor") and <span class="hl">Aster Manufacturing Group</span> ("Client"), effective as of <span class="hl">14 March 2026</span>.
+          <br><br>
+          The initial term shall be <span class="hl">24 months</span>, renewing automatically unless either party provides <span class="hl2">written notice at least 30 days</span> prior to the renewal date.
+          <br><br>
+          Vendor's aggregate liability under this Agreement shall be <span class="hl2">uncapped</span> in the event of a data breach arising from Vendor's gross negligence.
+          <br><br>
+          Governing law: State of Maharashtra, India.
+        </div>
+      </div>
+
+      <div class="fields">
+        <h3>Extracted fields</h3>
+        <div class="h-sub">Custom Document Processing model — published v4</div>
+
+        <div class="field-row"><span class="label">Party A</span><span class="val">Northline Supplies Pvt. Ltd. <span class="conf high">98%</span></span></div>
+        <div class="field-row"><span class="label">Party B</span><span class="val">Aster Manufacturing Group <span class="conf high">97%</span></span></div>
+        <div class="field-row"><span class="label">Effective date</span><span class="val">14 Mar 2026 <span class="conf high">99%</span></span></div>
+        <div class="field-row"><span class="label">Term length</span><span class="val">24 months <span class="conf high">95%</span></span></div>
+        <div class="field-row"><span class="label">Renewal notice</span><span class="val">30 days <span class="conf med">81%</span></span></div>
+        <div class="field-row"><span class="label">Liability cap</span><span class="val">Uncapped <span class="conf med">84%</span></span></div>
+
+        <div class="summary-box">
+          <span class="tag">Generative summary — Prompt model</span>
+          This is a 24-month auto-renewing agreement with Northline Supplies. Renewal requires 30 days' written notice. Liability is uncapped for breach caused by gross negligence — this is unusual and worth legal review.
+          <div>
+            <span class="flag">⚑ Uncapped liability clause</span>
+            <span class="flag">⚑ Auto-renewal — short notice window</span>
+          </div>
+        </div>
+
+        <div class="risk-box">
+          <div class="risk-gauge"><div class="inner">68%</div></div>
+          <div class="risk-text">
+            <div class="t1">Renewal risk: High</div>
+            <div class="t2">Prediction model — flagged for proactive 90-day outreach</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-caption">
+    <strong>What this shows:</strong> three AI Builder model types working together — custom Document Processing (structured field extraction with per-field confidence), a generative Prompt model (plain-English summary + unusual clause flags), and a Prediction model (renewal risk score). Medium-confidence fields (amber) are the ones a human reviewer should check before auto-filing.
+  </div>
+
+</body>
+</html>
