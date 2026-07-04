@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ITHelpAgent — Copilot Studio Mockup</title>
+<style>
+  :root{
+    --grad1:#0F6CBD; --grad2:#8764B8; --grad3:#D83B9A;
+    --surface:#F3F2F1;
+    --card:#fff;
+    --border:#E1DFDD;
+    --text:#201F1E;
+    --text-secondary:#605E5C;
+    --success:#107C10;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;background:var(--surface);color:var(--text);}
+  .badge-wrap{padding:20px 24px 0;}
+  .badge{display:inline-block;background:linear-gradient(90deg,var(--grad1),var(--grad2),var(--grad3));color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;letter-spacing:.3px;}
+  .desc{font-size:12.5px;color:var(--text-secondary);padding:6px 24px 16px;max-width:900px;}
+
+  .stage{display:flex;gap:24px;margin:0 24px 24px;flex-wrap:wrap;}
+
+  /* Agent topology panel */
+  .topology{
+    flex:1;min-width:340px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:22px;
+    box-shadow:0 4px 14px rgba(0,0,0,.06);
+  }
+  .topology h3{font-size:13px;margin:0 0 14px;}
+  .node{
+    border-radius:8px;padding:10px 14px;font-size:12px;font-weight:600;text-align:center;color:#fff;margin-bottom:10px;
+  }
+  .node.orchestrator{background:linear-gradient(90deg,var(--grad1),var(--grad2));padding:12px;font-size:13px;}
+  .node.knowledge{background:#0F6CBD;}
+  .node.ticket{background:#8764B8;}
+  .node.access{background:#D83B9A;}
+  .connect-line{width:2px;height:16px;background:#c8c6c4;margin:0 auto;}
+  .branches{display:flex;gap:10px;justify-content:space-between;}
+  .branches > div{flex:1;text-align:center;}
+  .branches .label{font-size:10px;color:var(--text-secondary);margin-top:4px;}
+  .gov-box{margin-top:16px;background:#FAF9F8;border:1px dashed #c8c6c4;border-radius:6px;padding:10px 12px;font-size:11px;color:var(--text-secondary);}
+
+  /* Chat panel */
+  .chatpanel{
+    flex:1.2;min-width:340px;background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,0,0,.06);display:flex;flex-direction:column;height:520px;
+  }
+  .chat-head{background:linear-gradient(90deg,var(--grad1),var(--grad2),var(--grad3));color:#fff;padding:12px 16px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;}
+  .chat-head .dot{width:7px;height:7px;background:#28c76f;border-radius:50%;}
+  .chat-body{flex:1;overflow-y:auto;padding:16px;background:#fafafa;}
+  .msg{max-width:80%;padding:10px 12px;border-radius:10px;font-size:12.5px;margin-bottom:12px;line-height:1.5;}
+  .msg.bot{background:#fff;border:1px solid var(--border);}
+  .msg.user{background:#0F6CBD;color:#fff;margin-left:auto;}
+  .msg .agent-tag{display:block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px;}
+  .msg.bot.knowledge .agent-tag{color:#0F6CBD;}
+  .msg.bot.ticket .agent-tag{color:#8764B8;}
+  .msg.bot.access .agent-tag{color:#D83B9A;}
+  .msg .cite{font-size:10.5px;color:var(--text-secondary);margin-top:6px;border-top:1px solid #eee;padding-top:6px;}
+  .confirm-box{background:#FFF4CE;border:1px solid #ecd98a;border-radius:8px;padding:8px 10px;font-size:11.5px;margin-top:8px;}
+  .escalate-box{background:#E7F4E4;border:1px solid #bfe3b6;border-radius:8px;padding:8px 10px;font-size:11.5px;margin-top:8px;color:#1e5c1e;}
+  .chat-input{border-top:1px solid var(--border);padding:10px 14px;font-size:12px;color:var(--text-secondary);background:#fff;}
+
+  .panel-caption{padding:6px 24px 26px;font-size:12px;color:var(--text-secondary);max-width:900px;line-height:1.6;}
+  .panel-caption strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+  <div class="badge-wrap"><span class="badge">COPILOT STUDIO MOCKUP</span></div>
+  <div class="desc">ITHelpAgent — multi-agent orchestration topology and conversational experience. Static reference only.</div>
+
+  <div class="stage">
+
+    <div class="topology">
+      <h3>Agent topology</h3>
+      <div class="node orchestrator">🧭 Orchestrator — ITHelpAgent</div>
+      <div class="connect-line"></div>
+      <div class="branches">
+        <div>
+          <div class="node knowledge">📘 Knowledge Agent</div>
+          <div class="label">Grounded on SharePoint KB<br>+ Dataverse Articles</div>
+        </div>
+        <div>
+          <div class="node ticket">🎫 Ticketing Agent</div>
+          <div class="label">MCP tool + Dataverse<br>Case actions</div>
+        </div>
+        <div>
+          <div class="node access">🔐 Access Agent</div>
+          <div class="label">Secure Power Automate<br>reset workflow only</div>
+        </div>
+      </div>
+      <div class="gov-box">🛡 Real-time risk assessment active · Transcripts logged to Dataverse ConversationLog · DLP-restricted actions only</div>
+    </div>
+
+    <div class="chatpanel">
+      <div class="chat-head"><span class="dot"></span> ITHelpAgent — IT Support</div>
+      <div class="chat-body">
+        <div class="msg user">How do I connect to the VPN from home?</div>
+        <div class="msg bot knowledge">
+          <span class="agent-tag">Knowledge Agent</span>
+          Open GlobalProtect, select "Corp-VPN-IN", and sign in with your Entra credentials. If MFA fails, wait 30s before retrying.
+          <div class="cite">Source: IT Knowledge Base — VPN Setup Guide, updated Jun 2026</div>
+        </div>
+
+        <div class="msg user">Also can you check the status of ticket 4521?</div>
+        <div class="msg bot ticket">
+          <span class="agent-tag">Ticketing Agent</span>
+          Ticket #4521 ("Laptop won't boot") is In Progress, assigned to R. Shah, SLA: 18 minutes remaining.
+        </div>
+
+        <div class="msg user">Reset my account password please</div>
+        <div class="msg bot access">
+          <span class="agent-tag">Access Agent</span>
+          I can start that for you.
+          <div class="confirm-box">⚠ This requires MFA re-verification before it executes. Confirm to continue — action will be logged for audit.</div>
+        </div>
+
+        <div class="msg user">Actually I need help with a benefits question</div>
+        <div class="msg bot">
+          That's outside what I can help with directly.
+          <div class="escalate-box">↪ Escalating to a human agent — full transcript and context have been shared, you won't need to repeat yourself.</div>
+        </div>
+      </div>
+      <div class="chat-input">Type a message…</div>
+    </div>
+
+  </div>
+
+  <div class="panel-caption">
+    <strong>What this shows:</strong> an orchestrator routes each request to the right specialist agent — Knowledge, Ticketing, or Access — rather than one monolithic bot trying to do everything. The Access Agent never performs a reset directly; it always defers to a governed Power Automate workflow with re-verification. When the request falls outside scope, the handoff to a human preserves full context.
+  </div>
+
+</body>
+</html>
