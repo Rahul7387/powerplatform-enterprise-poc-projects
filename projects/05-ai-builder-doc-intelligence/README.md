@@ -7,6 +7,10 @@
 
 ---
 
+**🔗 Live HTML mockup (look & feel preview):** [AI Builder mockup](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/05-ai-builder-doc-intelligence/index.html)
+
+---
+
 ## 1. Business Scenario
 
 A legal/procurement team receives hundreds of contracts and needs to:
@@ -71,7 +75,7 @@ flowchart TB
 13. Build a **Power BI dashboard**: extraction accuracy over time (drift monitoring), volume processed, review queue backlog, top risk-flagged contracts.
 14. Document a **retraining cadence** (e.g., quarterly, or after 20% drift detected) as part of the model's operational runbook.
 
-## 5. Demo Script
+## 5. Demo script
 1. Upload a new contract → show structured field extraction populate in Dataverse within seconds.
 2. Show the generative summary + "unusual clause" flags in plain English.
 3. Show a low-confidence extraction routing to the human review queue instead of silently guessing.
