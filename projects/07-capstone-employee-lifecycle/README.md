@@ -92,7 +92,7 @@ flowchart TB
     D5 --> BI
 ```
 
-## 4. Component Roles (The Architectural Justification You Present to Your Manager)
+## 4. Component Roles (The Architecture)
 
 | Layer | Component | Why This Tool, Specifically |
 |---|---|---|
