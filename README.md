@@ -10,15 +10,17 @@ Each project is a standalone, demoable POC with its own architecture diagram, st
 
 ## 📂 Projects
 
-| # | Project | Pillar | Data Source | Link |
-|---|---|---|---|---|
-| 1 | **FieldOps360** — Offline-first field service & inspection app | Canvas App | Dataverse + SharePoint | [View Project](./projects/01-canvas-field-ops/README.md) |
-| 2 | **CaseHub Enterprise** — IT/HR shared services case management | Model-Driven App | Dataverse | [View Project](./projects/02-model-driven-case-mgmt/README.md) |
-| 3 | **VendorConnect** — External vendor self-service portal | Power Pages | Dataverse + SharePoint | [View Project](./projects/03-power-pages-vendor-portal/README.md) |
-| 4 | **InvoiceFlow AP** — End-to-end accounts payable automation | Power Automate | SharePoint + Dataverse | [View Project](./projects/04-power-automate-invoice-ap/README.md) |
-| 5 | **DocIntelligence** — Contract extraction, summarization & renewal-risk prediction | AI Builder | SharePoint + Dataverse | [View Project](./projects/05-ai-builder-doc-intelligence/README.md) |
-| 6 | **ITHelpAgent** — Multi-agent IT helpdesk assistant | Copilot Studio | Dataverse + SharePoint | [View Project](./projects/06-copilot-studio-it-agent/README.md) |
-| 7 | ⭐ **OnboardX360 (CAPSTONE)** — Full employee lifecycle platform using **all six pillars together** | All Pillars | Dataverse + SharePoint | [View Project](./projects/07-capstone-employee-lifecycle/README.md) |
+| # | Project | Pillar | Data Source | Details | Live Mockup |
+|---|---|---|---|---|---|
+| 1 | **FieldOps360** — Offline-first field service & inspection app | Canvas App | Dataverse + SharePoint | [View Project](./projects/01-canvas-field-ops/README.md) | [🔗 Preview](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/01-canvas-field-ops/index.html) |
+| 2 | **CaseHub Enterprise** — IT/HR shared services case management | Model-Driven App | Dataverse | [View Project](./projects/02-model-driven-case-mgmt/README.md) | [🔗 Preview](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/02-model-driven-case-mgmt/index.html) |
+| 3 | **VendorConnect** — External vendor self-service portal | Power Pages | Dataverse + SharePoint | [View Project](./projects/03-power-pages-vendor-portal/README.md) | [🔗 Preview](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/03-power-pages-vendor-portal/index.html) |
+| 4 | **InvoiceFlow AP** — End-to-end accounts payable automation | Power Automate | SharePoint + Dataverse | [View Project](./projects/04-power-automate-invoice-ap/README.md) | [🔗 Preview](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/04-power-automate-invoice-ap/index.html) |
+| 5 | **DocIntelligence** — Contract extraction, summarization & renewal-risk prediction | AI Builder | SharePoint + Dataverse | [View Project](./projects/05-ai-builder-doc-intelligence/README.md) | [🔗 Preview](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/05-ai-builder-doc-intelligence/index.html) |
+| 6 | **ITHelpAgent** — Multi-agent IT helpdesk assistant | Copilot Studio | Dataverse + SharePoint | [View Project](./projects/06-copilot-studio-it-agent/README.md) | [🔗 Preview](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/06-copilot-studio-it-agent/index.html) |
+| 7 | ⭐ **OnboardX360 (CAPSTONE)** — Full employee lifecycle platform using **all six pillars together** | All Pillars | Dataverse + SharePoint | [View Project](./projects/07-capstone-employee-lifecycle/README.md) | [🔗 Preview](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/07-capstone-employee-lifecycle/index.html) |
+
+> Live mockups are static HTML/CSS pages approximating each product's real look & feel (Fluent UI styling, brand colors, layout conventions) — served via GitHub Pages. They are visual references only, not functional apps.
 
 ---
 
