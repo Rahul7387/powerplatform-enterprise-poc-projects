@@ -7,6 +7,10 @@
 
 ---
 
+**🔗 Live HTML mockup (look & feel preview):** [Canvas App mockup](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/01-canvas-field-ops/index.html)
+
+---
+
 ## 1. Business Scenario
 
 A facilities/field-service organization has technicians visiting sites with unreliable connectivity (basements, rural sites, warehouses). They need to:
@@ -87,7 +91,7 @@ flowchart TB
 20. Add **environment variables** and **connection references** so no hardcoded URLs/connections travel between environments.
 21. Document rollback plan and version history in `CHANGELOG.md`.
 
-## 5. Demo Script (What to Show Your Manager)
+## 5. Demo script
 1. Open app online → show real-time Dataverse data.
 2. Turn on airplane mode → keep working (create inspection, snap photo, AI auto-tags severity).
 3. Turn connectivity back on → show automatic delta sync and Teams approval card firing.
