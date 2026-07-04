@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OnboardX360 — Capstone Platform Mockup</title>
+<style>
+  :root{
+    --purple:#742774; --blue:#0066FF; --teal:#0B5FFF; --success:#107C10;
+    --surface:#F3F2F1; --card:#fff; --border:#E1DFDD; --text:#201F1E; --text-secondary:#605E5C;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;background:var(--surface);color:var(--text);}
+  .badge-wrap{padding:20px 24px 0;}
+  .badge{display:inline-block;background:linear-gradient(90deg,#742774,#0066FF,#8764B8);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;letter-spacing:.3px;}
+  .desc{font-size:12.5px;color:var(--text-secondary);padding:6px 24px 18px;max-width:900px;}
+
+  .hub{margin:0 24px 24px;background:#0B1B3A;border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.18);}
+  .hub-top{
+    background:linear-gradient(120deg,#742774 0%,#3d2a8a 45%,#0066FF 100%);
+    color:#fff;padding:26px 30px;
+  }
+  .hub-top .eyebrow{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#e6d9f5;font-weight:700;}
+  .hub-top h1{font-size:22px;margin:6px 0 6px;}
+  .hub-top p{font-size:12.5px;color:#e9e2f7;max-width:560px;margin:0;}
+
+  .journey{display:flex;background:#11244a;padding:14px 24px;gap:6px;overflow-x:auto;}
+  .step{
+    flex:1;min-width:130px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    border-radius:8px;padding:10px 12px;color:#dbe4fb;text-align:center;font-size:11px;position:relative;
+  }
+  .step .n{font-size:9.5px;font-weight:800;color:#9db6f0;letter-spacing:.5px;display:block;margin-bottom:4px;}
+  .step.current{background:#0066FF;color:#fff;border-color:#0066FF;font-weight:700;}
+  .arrow{align-self:center;color:#5878b8;font-size:14px;}
+
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:22px 24px 28px;background:#F7F8FC;}
+  .tile{
+    background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.05);
+  }
+  .tile .icon-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .tile .icon{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;flex-shrink:0;}
+  .tile .name{font-size:12.5px;font-weight:700;}
+  .tile .pillar{font-size:10px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.3px;}
+  .tile .body{font-size:11.5px;color:var(--text-secondary);line-height:1.5;margin-top:4px;}
+  .tile .mini-status{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;}
+  .chip{font-size:9.5px;font-weight:700;padding:2px 8px;border-radius:8px;}
+  .chip.ok{background:#DFF6DD;color:var(--success);}
+  .chip.info{background:#DEECF9;color:#0078D4;}
+  .chip.warn{background:#FFF1D6;color:#8a6100;}
+
+  .ic-pages{background:#0B5FFF;} .ic-flow{background:#0066FF;} .ic-canvas{background:#742774;}
+  .ic-model{background:#0F6CBD;} .ic-ai{background:#8764B8;} .ic-copilot{background:linear-gradient(135deg,#0F6CBD,#D83B9A);}
+
+  .metrics{display:flex;gap:16px;padding:0 24px 28px;flex-wrap:wrap;}
+  .metric-card{flex:1;min-width:160px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:14px 16px;}
+  .metric-card .num{font-size:21px;font-weight:800;color:#0B1B3A;}
+  .metric-card .lbl{font-size:11px;color:var(--text-secondary);margin-top:2px;}
+
+  .panel-caption{padding:6px 24px 26px;font-size:12px;color:var(--text-secondary);max-width:900px;line-height:1.6;}
+  .panel-caption strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+  <div class="badge-wrap"><span class="badge">CAPSTONE — ALL PILLARS UNIFIED</span></div>
+  <div class="desc">OnboardX360 — a single Dataverse-backed employee lifecycle platform combining Power Pages, Canvas App, Model-Driven App, Power Automate, AI Builder, and Copilot Studio. This hub view represents how a new hire's journey touches every component. Static reference only.</div>
+
+  <div class="hub">
+    <div class="hub-top">
+      <div class="eyebrow">Employee Lifecycle Platform</div>
+      <h1>OnboardX360</h1>
+      <p>One Dataverse core. Six purpose-built experiences. Tracking Ananya Rao's onboarding, day 3 of 5.</p>
+    </div>
+
+    <div class="journey">
+      <div class="step"><span class="n">STEP 1</span>Offer accepted<br>Power Pages</div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">STEP 2</span>Provisioning<br>Power Automate</div>
+      <div class="arrow">→</div>
+      <div class="step current"><span class="n">STEP 3 · NOW</span>Day-1 checklist<br>Canvas App</div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">STEP 4</span>IT/HR case handling<br>Model-Driven App</div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">STEP 5</span>Ask anything<br>Copilot Studio</div>
+    </div>
+
+    <div class="tiles">
+      <div class="tile">
+        <div class="icon-row"><div class="icon ic-pages">🌐</div><div><div class="name">Pre-Hire Portal</div><div class="pillar">Power Pages</div></div></div>
+        <div class="body">Offer acceptance, ID upload, benefits election — anonymous to authenticated.</div>
+        <div class="mini-status"><span class="chip ok">Submitted</span><span class="chip info">ID verified via AI Builder</span></div>
+      </div>
+
+      <div class="tile">
+        <div class="icon-row"><div class="icon ic-flow">⚡</div><div><div class="name">Onboarding Orchestration</div><div class="pillar">Power Automate</div></div></div>
+        <div class="body">Provisions accounts, orders equipment, generates a personalized task list.</div>
+        <div class="mini-status"><span class="chip ok">4/4 steps complete</span></div>
+      </div>
+
+      <div class="tile">
+        <div class="icon-row"><div class="icon ic-canvas">📱</div><div><div class="name">Day-1 Companion</div><div class="pillar">Canvas App</div></div></div>
+        <div class="body">Offline-first mobile checklist, building map, org chart, chat entry point.</div>
+        <div class="mini-status"><span class="chip warn">2 tasks remaining</span></div>
+      </div>
+
+      <div class="tile">
+        <div class="icon-row"><div class="icon ic-model">🗂</div><div><div class="name">HR/IT Ops Console</div><div class="pillar">Model-Driven App</div></div></div>
+        <div class="body">Case management for provisioning issues, SLA-tracked, security-role governed.</div>
+        <div class="mini-status"><span class="chip info">1 open case — badge access</span></div>
+      </div>
+
+      <div class="tile">
+        <div class="icon-row"><div class="icon ic-ai">✨</div><div><div class="name">Personalized Task AI</div><div class="pillar">AI Builder</div></div></div>
+        <div class="body">Generates a role- and department-aware onboarding task list automatically.</div>
+        <div class="mini-status"><span class="chip ok">Generated for: Data Analyst, Finance</span></div>
+      </div>
+
+      <div class="tile">
+        <div class="icon-row"><div class="icon ic-copilot">💬</div><div><div class="name">OnboardX Assistant</div><div class="pillar">Copilot Studio</div></div></div>
+        <div class="body">Multi-agent chat embedded in both the portal and the mobile app.</div>
+        <div class="mini-status"><span class="chip info">"Who do I contact for badge access?" answered</span></div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric-card"><div class="num">2.3 days</div><div class="lbl">Avg. time-to-productivity (was 9.1)</div></div>
+      <div class="metric-card"><div class="num">86%</div><div class="lbl">Onboarding tasks self-served</div></div>
+      <div class="metric-card"><div class="num">71%</div><div class="lbl">Copilot containment rate</div></div>
+      <div class="metric-card"><div class="num">0</div><div class="lbl">Cross-vendor / cross-employee data leaks</div></div>
+    </div>
+  </div>
+
+  <div class="panel-caption">
+    <strong>What this shows:</strong> one employee record in Dataverse threading through every pillar — the portal, the automation, the mobile app, the ops console, the AI models, and the conversational agent all read and write the same governed data model. The metrics strip is the slide that actually gets forwarded up the management chain.
+  </div>
+
+</body>
+</html>
