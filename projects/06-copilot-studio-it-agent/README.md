@@ -7,6 +7,10 @@
 
 ---
 
+**🔗 Live HTML mockup (look & feel preview):** [Copilot Studio mockup](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/06-copilot-studio-it-agent/index.html)
+
+---
+
 ## 1. Business Scenario
 
 IT Helpdesk fields hundreds of repetitive requests (password reset, software install request, VPN issues, ticket status checks) alongside genuinely complex issues that need a human. The goal is an agent that:
@@ -80,7 +84,7 @@ flowchart TB
 15. Apply DLP-aligned connector restrictions so the agent can only use approved connectors/actions.
 16. Set up an analytics dashboard: resolution rate without human handoff, average handling time, top failure/escalation reasons — the metric that proves ROI.
 
-## 5. Demo Script
+## 5. Demo script
 1. Ask a common FAQ ("How do I connect to VPN?") — show grounded answer with citation.
 2. Ask it to create and then check status of a ticket — show the ticketing agent's action + confirmation step.
 3. Trigger a password reset request — show it hands off to the secure Power Automate flow with proper verification, not a direct unsafe action.
