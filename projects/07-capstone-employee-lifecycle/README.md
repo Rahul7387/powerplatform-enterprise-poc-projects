@@ -8,6 +8,10 @@
 
 ---
 
+**🔗 Live HTML mockup (look & feel preview):** [Capstone mockup](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/07-capstone-employee-lifecycle/index.html)
+
+---
+
 ## 1. Business Scenario
 
 HR, IT, Facilities, and a new hire's manager all currently run **disconnected** onboarding/offboarding processes: spreadsheets, email chains, manual account provisioning requests, and a new-hire who doesn't know what to do on day one. Leadership wants **one platform covering the entire employee lifecycle** — pre-boarding, onboarding, internal case management, self-service for the employee, and offboarding — as a single governed Dataverse-based solution.
@@ -131,7 +135,7 @@ flowchart TB
 14. Enable the **AI-powered governance agent** at the tenant level to continuously monitor this solution's health, connector usage, and risk.
 15. Set up **GitHub-based ALM**: solution exported and version-controlled in this very repo, pipeline promoting Dev → Test → Prod with automated solution-checker gates.
 
-## 6. Demo Script (The One to Actually Run for Your Manager)
+## 6. Demo script
 1. **Pre-hire**: Show a "new hire" completing the Power Pages portal — ID upload auto-verified by AI Builder.
 2. **Automation fires**: Show the Power Automate run provisioning tasks, generating a personalized task list via AI, and notifying IT/Facilities/Manager.
 3. **Day 1**: Open the Canvas App on a phone in airplane mode — show the offline checklist still works, then reconnect and show sync.
