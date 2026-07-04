@@ -7,6 +7,10 @@
 
 ---
 
+**🔗 Live HTML mockup (look & feel preview):** [Power Automate mockup](https://rahul7387.github.io/powerplatform-enterprise-poc-projects/projects/04-power-automate-invoice-ap/index.html)
+
+---
+
 ## 1. Business Scenario
 
 The Accounts Payable team manually receives vendor invoices via email/SharePoint upload, keys data into an ERP-adjacent system, matches against POs, routes for approval based on amount thresholds, and files documents. It's slow and error-prone. The goal: a resilient, intelligent, self-monitoring automation pipeline — not just "a flow that copies a file."
@@ -71,7 +75,7 @@ flowchart TB
 15. Enable **object-centric process mining** against the AP process data (Invoice, PO, Approval, Payment as related "objects") to visualize the real end-to-end process and bottlenecks.
 16. Build a **Power BI dashboard**: average cycle time before vs. after automation, exception rate by category, auto-approval rate.
 
-## 5. Demo Script
+## 5. Demo script
 1. Drop a clean invoice PDF into SharePoint → show full auto-processing to "Posted" in under a minute.
 2. Drop an invoice with a PO mismatch → show Teams approval card, approve it, watch it post.
 3. Simulate a connector failure (disable a connection briefly) → show exception log + Teams alert firing instead of a silent failure.
